@@ -1,0 +1,5 @@
+<h1>Details</h1>
+
+<% @details.each do |detail| %>
+  <p><%= link_to detail.name, detail_path(detail) %></p>
+<% end %>
