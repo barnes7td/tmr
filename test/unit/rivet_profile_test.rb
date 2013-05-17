@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DetailTest < ActiveSupport::TestCase
+class RivetProfileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

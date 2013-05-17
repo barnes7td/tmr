@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dimensions: MyString
+  material: MyString
+  length: 1.5
+
+two:
+  dimensions: MyString
+  material: MyString
+  length: 1.5

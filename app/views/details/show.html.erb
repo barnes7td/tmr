@@ -3,19 +3,19 @@
     <span class="label"><%= @detail.name %></span> <span class="detail-word">Detail</span>
   </div>
 </div>
-  <div class="row">
-    <table class="large-6 columns">
-      <tr>
-        <th>Part Name</th>
-        <th>Quantity</th> 
-        <th>Ship Loose</th>
-      </tr>  
-      <% @detail.transactions.each do |trans| %>
-      <tr>
-        <td><%= trans.part.name %></td>
-        <td><%= trans.quantity %></td> 
-        <td><%= trans.ship_loose %></td>
-      </tr>
-      <% end %>
-    </table>
-  </div>
+<div class="row">
+  <table class="large-6 columns">
+    <tr>
+      <th>Part Name</th>
+      <th>Quantity</th> 
+      <th>Ship Loose</th>
+    </tr>  
+    <% @detail.transactions.each do |trans| %>
+    <tr>
+      <td><%= trans.part.name %></td>
+      <td><%= trans.quantity %></td> 
+      <td><%= trans.ship_loose %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

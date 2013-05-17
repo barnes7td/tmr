@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515165431) do
+ActiveRecord::Schema.define(:version => 20130517225431) do
 
   create_table "details", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,31 @@ ActiveRecord::Schema.define(:version => 20130515165431) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "fastener_profiles", :force => true do |t|
+    t.float    "diameter"
+    t.string   "material"
+    t.float    "length"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "parts", :force => true do |t|
-    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "profile_id"
+    t.string   "profile_type"
+  end
+
+  create_table "rivet_profiles", :force => true do |t|
+    t.float    "diameter"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "stock_profiles", :force => true do |t|
+    t.string   "dimensions"
+    t.string   "material"
+    t.float    "length"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -21,6 +21,14 @@ group :assets do
   gem 'zurb-foundation', '~> 4.0.0'
 end
 
+group :development do
+  gem 'quiet_assets'
+  gem 'puma'
+  gem 'meta_request'
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
