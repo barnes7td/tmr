@@ -1,0 +1,7 @@
+<h1>Parts</h1>
+<%= form_for @part do |f| %>
+    <div class="row">
+      <div class="large-2"><%= f.select "Type" %></div>
+      <%= f.submit "Create" %>
+    </div>
+<% end %>

@@ -1,4 +1,6 @@
 Tmr::Application.routes.draw do
+
+  resources :parts
   resources :details
   # Details 
   # get "details/index"

@@ -1,0 +1,26 @@
+<%= form_for @detail do |f| %>
+    <div class="row">
+      <div class="large-2"><%= f.label :name, "Detail Name" %></div>
+      <div class="large-8"><%= f.text_field :name %></div>
+
+      <%= f.fields_for :parts do |builder| %>
+        <fieldset>
+          <div class="large-2"><%= builder.label :part, "Part Name" %></div>
+          <div class="large-8"><%= builder.text_field :name %></div>
+      <% end %>
+
+      <%= f.fields_for :transactions do |builder| %>
+          <div class="large-2"><%# builder.label :part, "Part Name" %></div>
+          <div class="large-8"><%# builder.text_field :part %></div>
+
+          <div class="large-2"><%= builder.label :quantity, "Quantity" %></div>
+          <div class="large-8"><%= builder.text_field :quantity %></div>
+
+          <div class="large-2"><%= builder.label :ship_loose, "Ship Loose" %></div>
+          <div class="large-8"><%= builder.text_field :ship_loose %></div>
+        </fieldset>
+      <% end %>
+
+      <%= f.submit "Create" %>
+    </div>
+<% end %>

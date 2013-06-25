@@ -4,6 +4,8 @@ class Part < ActiveRecord::Base
   has_many :details, through: :transactions
   belongs_to :profile, polymorphic: true
 
-  delegate :name, to: :profile
+  delegate :name, to: :profile, allow_nil: :true
+  # delegate :quantity, to: :profile
+  # delegate :ship_loose, to: :profile
 
 end
